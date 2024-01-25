@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Scrolling</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
     <!-- Navigationsbar zur einfachen Pflege in eigene HTML ausgelagert-->
-    <script id="replace_with_navbar" src="navbar.js"></script>
-    
+    <div id="nav-placeholder">
+    </div>
+    <script>
+    $(function(){
+        $("#nav-placeholder").load("/navbar/navbar.html");
+    });
+    </script>
 </body>
 </html>

@@ -101,6 +101,10 @@
     transition: all 0.3s ease;
 }
 
+/*
+Navigationsbar für kleinere Screens z.B. Handys
+*/
+
 @media screen and (max-width: 960px) {
     .navbar__container {
         display: flex;
@@ -145,6 +149,8 @@
         margin: 5px auto;
         transition:  all 0.3s ease-in-out;
         background: #fff;
+        display: block;
+        cursor: pointer;
     }
 
     .navbar__item {
@@ -178,11 +184,7 @@
         margin: 0;
     }
 
-    .navbar__toggle .bar {
-        display: block;
-        cursor: pointer;
-    }
-
+    /* Formen der drei Balken in ein 'X' */
     #mobile-menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
