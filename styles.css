@@ -1,9 +1,15 @@
 * {
-  background-color: #161616;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #161616;
+  overflow-x: hidden;
+  height: 1000vh;
 }
 
 .navbar {
@@ -15,6 +21,7 @@
   font-size: 1.2rem;
   position: sticky;
   top: 0;
+  margin-top: 0;
   z-index: 999;
 }
 
@@ -227,14 +234,14 @@
 }
 
 .main__container {
-    align-items: center;
-    justify-self: center;
-    margin: 10px auto;
-    height: auto;
-    z-index: 1;
-    width: 100%;
-    max-width: 1200px;
-  }
+  align-items: center;
+  justify-self: center;
+  margin: 10px auto;
+  height: auto;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+}
 
 .main h1 {
   font-size: 3rem;
@@ -380,3 +387,57 @@
     margin: 2.5rem 0;
   }
 }
+
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vh;
+  height: 100vh;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#example1 {
+  position: absolute;
+}
+
+.parallax img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+}
+
+.parallax img#fisch1 {
+  transform: translate3d(-100px, -200px, 0);
+}
+
+.parallax p {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #161616;
+  color: #fff;
+}
+
+.parallax p#text-example1 {
+  position: absolute;
+  width: 300px;
+  height: 35px;
+  border: none;
+  text-align: center;
+  padding-top: 8px;
+  border-radius: 5px;
+  transform: translate3d( 300px, 130px, 0);
+}
+

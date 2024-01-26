@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parallax Beispiele</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigationbar - Optimiert für PC und Handy -->
     <nav class="navbar">
-        <div class="navbar__container">
-          <a href="/" id="navbar__logo">PARALLAX SCROLLING</a>
-          <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul class="navbar__menu">
-            <li class="navbar__item">
-              <a href="/" class="navbar__links"> Home </a>
-            </li>
-            <li class="navbar__item">
-              <a href="/examples.html" class="navbar__links"> Beispiele </a>
-            </li>
-            <li class="navbar__btn">
-              <a href="/tour.html" class="button"> Tour </a>
-            </li>
-          </ul>
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo">PARALLAX SCROLLING</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </nav>
-      
-      <script src="app.js"></script>
-</body>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links"> Home </a>
+          </li>
+          <li class="navbar__item">
+            <a href="/examples.html" class="navbar__links"> Beispiele </a>
+          </li>
+          <li class="navbar__btn">
+            <a href="/tour.html" class="button"> Tour </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="background">
+        <img src="images/sea.png" id="sea">
+    </div>
+    <div class="parallax">
+      <p id="text-example1">Ich schwimme nach links und rechts!</p>
+      <img src="images/Fisch1.png" id="fisch1" />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
