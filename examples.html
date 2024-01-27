@@ -29,13 +29,99 @@
         </ul>
       </div>
     </nav>
+    <!-- Navigationsbar-Ende -->
+
+    <!-- Hintergrundbild -->
     <div class="background">
-        <img src="images/sea.png" id="sea">
+      <img src="images/sea.png" id="sea" />
     </div>
+
+    <!-- Beispiel 1 (Fisch nach links und rechts) -->
     <div class="parallax">
       <p id="text-example1">Ich schwimme nach links und rechts!</p>
       <img src="images/Fisch1.png" id="fisch1" />
+      <div class="parallax__exampleTab" id="exampleTab1">
+        <div class="exampleWindow">
+          <div class="exampleTab">
+            <button
+              class="tablLinks"
+              onclick="openExampleTab(event, 'html-example1')"
+            >
+              html
+            </button>
+            <button
+              class="tabLinks"
+              onclick="openExampleTab(event, 'css-example1')"
+            >
+              css
+            </button>
+            <button
+              class="tabLinks"
+              onclick="openExampleTab(event, 'js-example1')"
+            >
+              js
+            </button>
+          </div>
+          <div id="html-example1" class="tabcontent">
+            <p>
+              &lt;div class="parallax"&gt; <br />
+              &lt;p id="text"&gt;Ich schwimme nach links und rechts!&lt;/p&gt;
+              <br />
+              &lt;img src="images/Fisch1.png" id="fisch1" /&gt; <br />
+              &lt;/div&gt;
+            </p>
+          </div>
+          <div id="css-example1" class="tabcontent">
+            <p>
+              .parallax { <br />
+              position: relative; <br />
+              display: flex; <br />
+              justify-content: center; <br />
+              align-self: center; <br />
+              height: 100vh; <br />
+              background-size: cover; <br />
+              background-position: center; <br />
+              background-attachment: fixed; <br />
+              } <br />
+              .parallax p { <br />
+              position: absolute; <br />
+              top: 0px; <br />
+              left: 0px; <br />
+              background-color: #161616; <br />
+              color: #fff; <br />
+              } <br />
+              .parallax img { <br />
+              position: absolute; <br />
+              top: 0px; <br />
+              left: 0px; <br />
+              pointer-events: none; <br />
+              } <br />
+            </p>
+          </div>
+          <div id="js-example1" class="tabcontent">
+            <p>
+              let fisch1 = document.getElementById("fisch1"); <br />
+              let textExample1 = document.getElementById("text-example1");
+              <br />
+              window.addEventListener("scroll", () => { <br />
+              let scrollHight = window.scrollY; <br />
+              let windowWidth = window.innerWidth; <br />
+              let windowHight = window.innerHeight; <br />
+              let parallaxStay = scrollHight + "px"; <br />
+              let parallaxMoveRight = (scrollHight / windowHight) * windowWidth
+              + "px"; <br />
+              fisch1.style.marginLeft = parallaxMoveRight; <br />
+              fisch1.style.marginTop = parallaxStay; <br />
+              textExample1.style.marginLeft = parallaxMoveRight; <br />
+              textExample1.style.marginTop = parallaxStay; <br />
+              }); <br />
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Beispiel 2 (Fisch nach oben und unten) -->
 
     <script src="app.js"></script>
   </body>

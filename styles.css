@@ -441,3 +441,76 @@ body {
   transform: translate3d( 300px, 130px, 0);
 }
 
+.exampleTab {
+  overflow: hidden;
+  border: none;
+  background-color: #101010;
+  height: 45px;
+}
+
+/* Style the buttons inside the tab */
+.exampleTab button {
+  justify-items: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 35px;
+  margin-top: 5px;
+  margin-left: 10px;
+  justify-content: space-between;
+  width: 90px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f77062;
+  color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.exampleTab button:hover {
+  background: #4837ff;
+  transition: all 0.3s ease;
+}
+
+/* Create an active/current tablink class */
+.exampleTab button:active {
+  background: #402fff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  justify-content: space-between;
+  margin-top: 80px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.parallax__exampleTab {
+  position: absolute;
+  top: 400px;
+  left: 80px;
+  animation: fadeEffect 1s;
+}
+
+.exampleWindow {
+  border: none;
+  border-radius: 5px;
+  margin-top: -50px;
+  margin-left: -20px;
+  width:  700px;
+  height: 500px;
+  background-color: #161616;
+}
