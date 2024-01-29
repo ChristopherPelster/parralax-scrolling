@@ -414,32 +414,36 @@ body {
   pointer-events: none;
 }
 
-.parallax img#fisch1 {
-  transform: translate3d(-100px, -200px, 0);
-}
-
 .parallax p {
   position: absolute;
   top: 0px;
   left: 0px;
   background-color: #161616;
   color: #fff;
-}
-
-.parallax p#text-example1 {
-  position: absolute;
-  width: 300px;
-  height: 35px;
-  border: none;
-  text-align: center;
-  padding-top: 8px;
-  border-radius: 5px;
-  transform: translate3d( 300px, 130px, 0);
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
 }
 
 /*******************************************************************************/
 /* Tabelle für die Codesnippets der Parallax-Effekte                           */
 /*******************************************************************************/
+.parallax__exampleTab {
+  position: absolute;
+  top: 400px;
+  left: 80px;
+  animation: fadeEffect 1s;
+}
+
+.exampleWindow {
+  border: none;
+  border-radius: 5px;
+  margin-top: -50px;
+  margin-left: -20px;
+  width:  700px;
+  height: 510px;
+  background-color: #161616;
+}
+
 .exampleTab {
   overflow: hidden;
   border: none;
@@ -477,12 +481,18 @@ body {
   display: none;
   padding: 6px 12px;
   justify-content: space-between;
-  margin-top: 80px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.exampleText {
+  display: none;
+}
+
+.parallax img {
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
 }
 
-/* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -493,19 +503,32 @@ body {
   to {opacity: 1;}
 }
 
-.parallax__exampleTab {
+/*******************************************************************************/
+/* Darstellung für die einzelnen Objekte festelegen                            */
+/*******************************************************************************/
+.parallax p#text-example1 {
   position: absolute;
-  top: 400px;
-  left: 80px;
-  animation: fadeEffect 1s;
+  display: block;
+  width: 300px;
+  height: 35px;
+  border: none;
+  text-align: center;
+  padding-top: 8px;
+  border-radius: 5px;
+  transform: translate3d( 300px, 130px, 0);
 }
 
-.exampleWindow {
+.parallax img#fisch1 {
+  transform: translate3d(-100px, -200px, 0);
+}
+
+.parallax p#text-example2 {
+  position: absolute;
+  width: 300px;
+  height: 35px;
   border: none;
+  text-align: center;
+  padding-top: 8px;
   border-radius: 5px;
-  margin-top: -50px;
-  margin-left: -20px;
-  width:  700px;
-  height: 500px;
-  background-color: #161616;
+  transform: translate3d( 300px, 130px, 0);
 }

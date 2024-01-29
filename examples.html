@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Navigationbar - Optimiert für PC und Handy -->
+    <!-- Beginn: Navigationbar - Optimiert für PC und Handy -->
     <nav class="navbar">
       <div class="navbar__container">
         <a href="/" id="navbar__title">PARALLAX SCROLLING</a>
@@ -29,45 +29,53 @@
         </ul>
       </div>
     </nav>
-    <!-- Navigationsbar-Ende -->
+    <!-- Ende: Navigationsbar -->
 
-    <!-- Hintergrundbild -->
+    <!-- Beginn: Hintergrundbild -->
     <div class="background">
       <img src="images/sea.png" id="sea" />
     </div>
-    <!-- Hintergrundbild-Ende -->
+    <!-- Ende: Hintergrundbild -->
 
-    <!-- Beispiel 1 (Fisch nach links und rechts) -->
+    <!-- Beginn: der Parallax-Elemente -->
     <div class="parallax">
-      <p id="text-example1">Ich schwimme nach links und rechts!</p>
+      <!-- Begin: Objekte für den Parallax-Effekt -->
       <img src="images/Fisch1.png" id="fisch1" />
-      <!-- Beispielcodesnippets für Parallax-Scrolling Beipiel 1-->
+      <img src="images/Fisch2.png" id="fisch2" />
+      <!-- Ende: Objekte für den Parallax-Effekt -->
+
+      <!-- Beginn: Beispiel 1 (Fisch nach  rechts) -->
+      <p class="exampleText" id="text-example1">Ich schwimme nach rechts!</p>
       <div class="parallax__exampleTab" id="exampleTab1">
         <div class="exampleWindow">
+          <!-- Beginn: Header für Codesnippets des Parallax-Scrolling Beipiel 1-->
           <div class="exampleTab">
             <button
               class="tablLinks"
-              onclick="openExampleTab(event, 'html-example1')"
+              onclick="openExampleTab('html-example1')"
             >
               html
             </button>
             <button
               class="tabLinks"
-              onclick="openExampleTab(event, 'css-example1')"
+              onclick="openExampleTab('css-example1')"
             >
               css
             </button>
             <button
               class="tabLinks"
-              onclick="openExampleTab(event, 'js-example1')"
+              onclick="openExampleTab('js-example1')"
             >
               js
             </button>
           </div>
+          <!-- Ende: Header für Codesnippets des Parallax-Scrolling Beipiel 1-->
+
+          <!-- Beginn: Codesnippets für Parallax-Scrolling Beipiel 1-->
           <div id="html-example1" class="tabcontent">
             <p>
               &lt;div class="parallax"&gt; <br />
-              &lt;p id="text"&gt;Ich schwimme nach links und rechts!&lt;/p&gt;
+              &lt;p id="text1"&gt;Ich schwimme nach rechts!&lt;/p&gt;
               <br />
               &lt;img src="images/Fisch1.png" id="fisch1" /&gt; <br />
               &lt;/div&gt;
@@ -85,6 +93,7 @@
               background-position: center; <br />
               background-attachment: fixed; <br />
               } <br />
+              &nbsp; <br>
               .parallax p { <br />
               position: absolute; <br />
               top: 0px; <br />
@@ -92,6 +101,7 @@
               background-color: #161616; <br />
               color: #fff; <br />
               } <br />
+              &nbsp; <br>
               .parallax img { <br />
               position: absolute; <br />
               top: 0px; <br />
@@ -103,34 +113,127 @@
           <div id="js-example1" class="tabcontent">
             <p>
               let fisch1 = document.getElementById("fisch1"); <br />
-              let textExample1 = document.getElementById("text-example1");
-              <br />
+              let text1 = document.getElementById("text1"); <br />
+              &nbsp; <br>
               window.addEventListener("scroll", () => { <br />
-              let scrollHight = window.scrollY; <br />
+              let scrollHeight = window.scrollY; <br />
               let windowWidth = window.innerWidth; <br />
-              let windowHight = window.innerHeight; <br />
-              let parallaxStay = scrollHight + "px"; <br />
-              let parallaxMoveRight = (scrollHight / windowHight) * windowWidth
+              let windowHeight = window.innerHeight; <br />
+              let parallaxStay = scrollHeight + "px"; <br />
+              let parallaxMoveRight = (scrollHeight / windowHeight) * windowWidth
               + "px"; <br />
+              &nbsp; <br>
               fisch1.style.marginLeft = parallaxMoveRight; <br />
               fisch1.style.marginTop = parallaxStay; <br />
-              textExample1.style.marginLeft = parallaxMoveRight; <br />
-              textExample1.style.marginTop = parallaxStay; <br />
+              text1.style.marginLeft = parallaxMoveRight; <br />
+              text1.style.marginTop = parallaxStay; <br />
               }); <br />
             </p>
           </div>
-          <!-- Beispielcodesnippets für Parallax-Scrolling Beipiel 1-->
+          <!-- Ende: Codesnippets für Parallax-Scrolling Beipiel 1-->
         </div>
       </div>
-      <div class="parallax__exampleTab" id="exampleTab2"></div>
+      <!-- Ende: Beispiel 1 (Fisch nach rechts) -->
+      
+
+      <!-- Beginn: Beispiel 2 (Fisch nach unten) -->
+      <p class="exampleText" id="text-example2">Ich schwimme nach unten!</p>
+      <div class="parallax__exampleTab" id="exampleTab2"><div class="exampleWindow">
+        <!-- Beginn: Header für Codesnippets des Parallax-Scrolling Beipiel 2-->
+        <div class="exampleTab">
+          <button
+            class="tablLinks"
+            onclick="openExampleTab('html-example2')"
+          >
+            html
+          </button>
+          <button
+            class="tabLinks"
+            onclick="openExampleTab('css-example2')"
+          >
+            css
+          </button>
+          <button
+            class="tabLinks"
+            onclick="openExampleTab('js-example2')"
+          >
+            js
+          </button>
+        </div>
+        <!-- Ende: Header für Codesnippets des Parallax-Scrolling Beipiel 2-->
+
+        <!-- Beginn: Codesnippets für Parallax-Scrolling Beipiel 2-->
+        <div id="html-example2" class="tabcontent">
+          <p>
+            &lt;div class="parallax"&gt; <br />
+            &lt;p id="text1"&gt;Ich schwimme nach unten!&lt;/p&gt; <br />
+            &lt;img src="images/Fisch1.png" id="fisch1" /&gt; <br />
+            &lt;/div&gt;
+          </p>
+        </div>
+        <div id="css-example2" class="tabcontent">
+          <p>
+            .parallax { <br />
+            position: relative; <br />
+            display: flex; <br />
+            justify-content: center; <br />
+            align-self: center; <br />
+            height: 100vh; <br />
+            background-size: cover; <br />
+            background-position: center; <br />
+            background-attachment: fixed; <br />
+            } <br />
+            &nbsp; <br>
+            .parallax p { <br />
+            position: absolute; <br />
+            top: 0px; <br />
+            left: 0px; <br />
+            background-color: #161616; <br />
+            color: #fff; <br />
+            } <br />
+            &nbsp; <br>
+            .parallax img { <br />
+            position: absolute; <br />
+            top: 0px; <br />
+            left: 0px; <br />
+            pointer-events: none; <br />
+            } <br />
+          </p>
+        </div>
+        <div id="js-example2" class="tabcontent">
+          <p>
+            let fisch1 = document.getElementById("fisch1"); <br />
+            let text1 = document.getElementById("text1");
+            <br />
+            &nbsp; <br>
+            window.addEventListener("scroll", () => { <br />
+            let scrollHeight = window.scrollY; <br />
+            let parallaxMoveDown = scrollHeight + (1 / 10) * scrollHeight +"px"; <br />
+            fisch1.style.marginTop = parallaxMoveDown; <br />
+            text1.style.marginTop = parallaxMoveDown; <br />
+            }); <br />
+          </p>
+        </div>
+        <!-- Ende: Codesnippets für Parallax-Scrolling Beipiel 2-->
+      </div>
+      
+      <p class="exampleText" id="text-example3"></p>
       <div class="parallax__exampleTab" id="exampleTab3"></div>
+      
+      <p class="exampleText" id="text-example4"></p>
       <div class="parallax__exampleTab" id="exampleTab4"></div>
+      
+      <p class="exampleText" id="text-example5"></p>
       <div class="parallax__exampleTab" id="exampleTab5"></div>
+      
+      <p class="exampleText" id="text-example6"></p>
       <div class="parallax__exampleTab" id="exampleTab6"></div>
     </div>
+    <!-- Ende: Parallax-Elemente -->
 
-    <!-- Beispiel 2 (Fisch nach oben und unten) -->
+    <!-- Beispiel 2 (Fisch nach unten) -->
 
     <script src="app.js"></script>
   </body>
 </html>
+
