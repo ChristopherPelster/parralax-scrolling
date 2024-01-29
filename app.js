@@ -33,6 +33,7 @@ let exampleTab5 = document.getElementById("exampleTab5");
 let exampleTab6 = document.getElementById("exampleTab6");
 let scrollHeightOld = 0;
 
+fisch1.translate
 /*******************************************************************************
  * Überwachung des Scrollens, damit der Parallax-Effekt ausgeführt werden kann
  *******************************************************************************/
@@ -114,7 +115,7 @@ function openExampleTab(exampleName) {
   }
   document.getElementById(exampleName).style.display = "block";
 }
-
+fisch1.o
 /*******************************************************************************
  *  Funktion um den Fisch samt Text und Tabelle nach unten zu bewegen
  *******************************************************************************/
